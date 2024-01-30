@@ -2,10 +2,11 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
-  const MaterialApp(
-    home: MyApp(),
-  ),
-);
+      const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: MyApp(),
+      ),
+    );
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -20,7 +21,10 @@ class _MyAppState extends State<MyApp> {
     return Scaffold(
       backgroundColor: Colors.blue,
       appBar: AppBar(
-        title: const Text('Ask Me Anything'),
+        title: const Text(
+          'Ask Me Anything',
+          style: TextStyle(color: Colors.white),
+        ),
         centerTitle: true,
         backgroundColor: Colors.blue.shade900,
       ),
